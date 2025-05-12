@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/macair/work/my-projects/fe-movie-app/src/features/home/components/AuthButton.tsx"],"sourcesContent":["\"use client\";\nimport { signIn, signOut, useSession } from \"next-auth/react\";\nimport { FaGoogle } from \"react-icons/fa6\";\n\nexport default function AuthButton() {\n  const { data: session } = useSession();\n\n  return session ? (\n    <>\n      <p>Signed in as {session.user?.email}</p>\n      <button onClick={() => signOut()}>Sign out</button>\n    </>\n  ) : (\n    <button className=\"btn btn-primary\" onClick={() => signIn(\"google\")}>\n      <FaGoogle /> Sign in with Google\n    </button>\n  );\n}\n"],"names":[],"mappings":";;;;AACA;AACA;;;AAFA;;;AAIe,SAAS;;IACtB,MAAM,EAAE,MAAM,OAAO,EAAE,GAAG,CAAA,GAAA,iJAAA,CAAA,aAAU,AAAD;IAEnC,OAAO,wBACL;;0BACE,6LAAC;;oBAAE;oBAAc,QAAQ,IAAI,EAAE;;;;;;;0BAC/B,6LAAC;gBAAO,SAAS,IAAM,CAAA,GAAA,iJAAA,CAAA,UAAO,AAAD;0BAAK;;;;;;;qCAGpC,6LAAC;QAAO,WAAU;QAAkB,SAAS,IAAM,CAAA,GAAA,iJAAA,CAAA,SAAM,AAAD,EAAE;;0BACxD,6LAAC,kJAAA,CAAA,WAAQ;;;;;YAAG;;;;;;;AAGlB;GAbwB;;QACI,iJAAA,CAAA,aAAU;;;KADd","debugId":null}}]
+}

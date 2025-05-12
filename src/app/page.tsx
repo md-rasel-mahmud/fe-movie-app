@@ -1,7 +1,14 @@
+import Banner from "@/features/home/components/Banner";
+import { EmblaOptionsType } from "embla-carousel";
+
+const OPTIONS: EmblaOptionsType = { loop: true };
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
 export default function Home() {
   return (
     <div>
-      <h1 className="text-3xl font-bold text-primary">hello</h1>
+      <Banner slides={SLIDES} options={OPTIONS} />
     </div>
   );
 }
